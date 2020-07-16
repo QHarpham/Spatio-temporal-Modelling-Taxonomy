@@ -1,0 +1,3 @@
+Spatio-temporal Modelling Taxonomy
+Paper published in Environmental Modeling and Software journal
+Licence (following Environmental Modeling and Software embaro period): Creative Commons 4.0 - https://creativecommons.org/licenses/by/4.0/
