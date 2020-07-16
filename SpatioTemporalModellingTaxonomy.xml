@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Taxonomy uri="https://github.com/QHarpham/Spatio-temporal-Modelling-Taxonomy">
+<Name>Spatio-temporal Modelling Taxonomy</Name>
+<Reference>Harpham,Q.K. 2020. A simple taxonomy for describing the spatio-temporal structure of environmental modelling data, Environmental Modeling and Software.</Reference>
+<Abstract>The Spatio-temporal Modelling Taxonomy: a simple taxonomy for describing the spatio-temporal structure of environmental numerical modelling data used as input to, or produced as output from environmental numerical models. Each taxonomy term has a spatial basis of either a point, a polyline or a polygon.</Abstract>
+<SpatialBasis>
+<Name>point</Name>
+<Description ref="https://en.wikipedia.org/wiki/Point_(geometry)">A unique, dimensionless location in Euclidean space, specified by an ordered pair of numbers for 2-dimensional space and a triplet for 3-dimensional space.</Description>
+<\SpatialBasis>
+<SpatialBasis>
+<Name>polyline</Name>
+<Description ref="https://en.wikipedia.org/wiki/Polygonal_chain">A connected series of line segments; a curve specified by a sequence of Point features (vertices).</Description>
+<\SpatialBasis>
+<SpatialBasis>
+<Name>polygon</Name>
+<Description ref="https://en.wikipedia.org/wiki/Polygon">A plane figure that is described by a finite number of straight line segments, which are connected to form a closed circuit.</Description>
+<\SpatialBasis>
+<Term spatialBasis="point">
+<Name>Point</Name>
+<Description>Data attributed to a single point, fixed in space. Data is applicable to a single time instant or interval.</Description>
+</Term>
+<Term spatialBasis="point">
+<Name>PointSeries</Name>
+<Description>Data attributed to a single point, fixed in space. Data is potentially varying in value across a set of time instants or intervals.</Description>
+</Term>
+<Term spatialBasis="point">
+<Name>PointTrack</Name>
+<Description>Data attributed to a single point which varies in position with time. Data is potentially varying in value across a set of time instants or intervals with the movement of the point.</Description>
+</Term>
+<Term spatialBasis="point">
+<Name>MultiPoint</Name>
+<Description>Data attributed to a collection of points, each fixed in space. Data is potentially varying in value for each point in the collection, but all data values are applicable to a single time instant or interval.</Description>
+<SpecialCase spatialBasis="point">
+<Name>PointCloud</Name>
+<Description>A (usually vast) MultiPoint, typically produced by a scanning process, with no additional attribution than the position of the point.</Description>
+</SpecialCase>
+</Term>
+<Term spatialBasis="point">
+<Name>MultiPointSeries</Name>
+<Description>Data attributed to a collection of points, each fixed in space. Data is potentially varying in value for each point in the collection and across a set of time instants or intervals.</Description>
+</Term>
+<Term spatialBasis="point">
+<Name>MultiPointTrack</Name>
+<Description>Data attributed to a collection of points, each of which varies in position with time. Data is potentially varying in value for each point in the collection and across a set of time instants or intervals with the movement of the points.</Description>
+</Term>
+<Term spatialBasis="polyline">
+<Name>Polyline</Name>
+<Description>Data attributed to a single polyline, fixed in space and geometry. Data is applicable to a single time instant or interval.</Description>
+</Term>
+<Term spatialBasis="polyline">
+<Name>PolylineSeries</Name>
+<Description>Data attributed to a single polyline, fixed in space and geometry. Data is potentially varying in value across a set of time instants or intervals.</Description>
+</Term>
+<Term spatialBasis="polyline">
+<Name>PolylineTrack</Name>
+<Description>Data attributed to a single polyline which varies in position and / or geometry with time. Data is potentially varying in value across a set of time instants or intervals with the variation in position and / or geometry of the polyline.</Description>
+</Term>
+<Term spatialBasis="polyline">
+<Name>MultiPolyline</Name>
+<Description>Data attributed to a collection of polylines, each fixed in space and geometry. Data is potentially varying in value for each polyline in the collection, but all data values are applicable to a single time instant or interval.</Description>
+</Term>
+<Term spatialBasis="polyline">
+<Name>MultiPolylineSeries</Name>
+<Description>Data attributed to a collection of polylines, each fixed in space and geometry. Data is potentially varying in value for each polyline in the collection and across a set of time instants or intervals.</Description>
+</Term>
+<Term spatialBasis="polyline">
+<Name>MultiPolylineTrack</Name>
+<Description>Data attributed to a collection of polylines, each of which varies in position and / or geometry with time. Data is potentially varying in value for each polyline in the collection and across a set of time instants or intervals with the variation in position and / or geometry of the polylines.</Description>
+</Term>
+<Term spatialBasis="polygon">
+<Name>Polygon</Name>
+<Description>Data attributed to a single polygon, fixed in space and geometry. Data is applicable to a single time instant or interval.</Description>
+</Term>
+<Term spatialBasis="polygon">
+<Name>PolygonSeries</Name>
+<Description>Data attributed to a single polygon, fixed in space and geometry. Data is potentially varying in value across a set of time instants or intervals.</Description>
+</Term>
+<Term spatialBasis="polygon">
+<Name>PolygonTrack</Name>
+<Description>Data attributed to a single polygon which varies in position and / or geometry with time. Data is potentially varying in value across a set of time instants or intervals with the variation in position and / or geometry of the polyline.</Description>
+</Term>
+<Term spatialBasis="polygon">
+<Name>MultiPolygon</Name>
+<Description>Data attributed to a collection of polygons, each fixed in space and geometry. Data is potentially varying in value for each polygon in the collection and may depend on multiple polygons, but all data values are applicable to a single time instant or interval.</Description>
+<SpecialCase spatialBasis="polygon">
+<Name>Grid</Name>
+<Description>A MultiPolygon where each Polygon is a regular rectangle and shares edges and vertices with all its neighbours.</Description>
+</SpecialCase>
+<SpecialCase spatialBasis="polygon">
+<Name>Mesh</Name>
+<Description>A MultiPolygon where the neighbouring polygons have shared edges and vertices but can be of different shapes and sizes.</Description>
+</SpecialCase>
+</Term>
+<Term spatialBasis="polygon">
+<Name>MultiPolygonSeries </Name>
+<Description>Data attributed to a collection of polygons, each fixed in space and geometry. Data is potentially varying in value for each polygon or combination of polygons in the collection and across a set of time instants or intervals.</Description>
+<SpecialCase spatialBasis="polygon">
+<Name>GridSeries</Name>
+<Description>A MultiPolygonSeries with the spatial structure of a Grid.</Description>
+</SpecialCase>
+<SpecialCase spatialBasis="polygon">
+<Name>MeshSeries</Name>
+<Description>A MultiPolygonSeries with the spatial structure of a Mesh.</Description>
+</SpecialCase>
+</Term>
+<Term spatialBasis="polygon">
+<Name>MultiPolygonTrack</Name>
+<Description>Data attributed to a collection of polygons, each of which varies in position and / or geometry with time. Data is potentially varying in value for each polygon or combination of polygons in the collection and across a set of time instants or intervals with the variation in position and / or geometry of the polygons.</Description>
+</Term>
+</Taxonomy>
+
