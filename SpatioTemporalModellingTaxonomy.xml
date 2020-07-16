@@ -3,18 +3,6 @@
 <Name>Spatio-temporal Modelling Taxonomy</Name>
 <Reference>Harpham,Q.K. 2020. A simple taxonomy for describing the spatio-temporal structure of environmental modelling data, Environmental Modeling and Software.</Reference>
 <Abstract>The Spatio-temporal Modelling Taxonomy: a simple taxonomy for describing the spatio-temporal structure of environmental numerical modelling data used as input to, or produced as output from environmental numerical models. Each taxonomy term has a spatial basis of either a point, a polyline or a polygon.</Abstract>
-<SpatialBasis>
-<Name>point</Name>
-<Description ref="https://en.wikipedia.org/wiki/Point_(geometry)">A unique, dimensionless location in Euclidean space, specified by an ordered pair of numbers for 2-dimensional space and a triplet for 3-dimensional space.</Description>
-<\SpatialBasis>
-<SpatialBasis>
-<Name>polyline</Name>
-<Description ref="https://en.wikipedia.org/wiki/Polygonal_chain">A connected series of line segments; a curve specified by a sequence of Point features (vertices).</Description>
-<\SpatialBasis>
-<SpatialBasis>
-<Name>polygon</Name>
-<Description ref="https://en.wikipedia.org/wiki/Polygon">A plane figure that is described by a finite number of straight line segments, which are connected to form a closed circuit.</Description>
-<\SpatialBasis>
 <Term spatialBasis="point">
 <Name>Point</Name>
 <Description>Data attributed to a single point, fixed in space. Data is applicable to a single time instant or interval.</Description>
